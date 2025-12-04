@@ -114,11 +114,12 @@ export default function BlogPostClient({ slug }: Props) {
       )}
 
       {post.contentHtml && (
-        <article
-          className="prose max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        />
-      )}
+  <article
+    className="article-body max-w-none"
+    dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+  />
+)}
+
 
       <div className="mt-8">
         <Link href="/blog" className="text-blue-600 underline">

@@ -1,15 +1,10 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +18,75 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Blog article styling */
+.article-body {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #0f172a; /* slate-900-ish */
+}
+
+/* Paragraphs */
+.article-body p {
+  margin-bottom: 1rem;
+}
+
+/* H2 headings */
+.article-body h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* H3 headings */
+.article-body h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Optional H4 if you ever use it */
+.article-body h4 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Lists */
+.article-body ul,
+.article-body ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-body li {
+  margin-bottom: 0.25rem;
+}
+
+/* Links */
+.article-body a {
+  color: #2563eb; /* blue-600-ish */
+  text-decoration: none;
+}
+
+.article-body a:hover {
+  text-decoration: underline;
+}
+
+/* Strong text */
+.article-body strong {
+  font-weight: 600;
+}
+
+/* FAQ / special sections */
+.article-body .faq {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
 }
